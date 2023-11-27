@@ -1,32 +1,12 @@
 import React from "react";
 import Nav from "../components/Nav";
+import Carousal from "../components/Carousal";
 
 function HomeScreen() {
   return (
     <div>
       <Nav />
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
+      <Carousal />
     </div>
   );
 }
