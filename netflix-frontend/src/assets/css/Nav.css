@@ -1,7 +1,15 @@
 .nav {
     padding: 20px;
-    height: 60px;
+    height: 6.5rem;
     z-index: 1;
+}
+
+.left {
+    gap: 2rem;
+}
+
+.brand>img {
+    height: 4rem;
 }
 
 .nav_logo {

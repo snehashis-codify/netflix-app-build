@@ -1,0 +1,41 @@
+.slick-next {
+    right: 0px !important;
+}
+
+.button__bar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    padding: 0;
+    border-radius: 40px;
+    width: 70px;
+    text-align: center;
+}
+
+.button__bar li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 3px;
+    padding: 0;
+}
+
+.button__bar li button {
+    border: none;
+    background: #8c8c8c;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 6px;
+    width: 6px;
+    border-radius: 7.5px;
+}
+
+.button__bar li.slick-active button {
+    background-color: #fff;
+}
+
+.slick-prev {
+    left: 0px !important;
+    z-index: 1;
+}

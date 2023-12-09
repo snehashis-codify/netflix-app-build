@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/Banner.css";
+
 function CarousalItem({ carousalItem }) {
   const trauncate = (description) => {
     return description?.length < 150
@@ -11,12 +12,16 @@ function CarousalItem({ carousalItem }) {
       className="banner position-relative object-fit-contain text-white"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url('https://images.hothardware.com/contentimages/newsitem/59866/content/Netflix_Banner.jpg')`,
+        backgroundImage: `url('${process.env.REACT_APP_IMAGE_URL}/${carousalItem?.backdrop_path}')`,
         backgroundPosition: "center center",
       }}
     >
-      <div className="mx-4 banner_content">
-        <p className="h1 banner_title">Movie Name</p>
+      <div className="mx-5 banner_content">
+        <p className="h1 banner_title">
+          {carousalItem?.name ||
+            carousalItem?.title ||
+            carousalItem?.original_name}
+        </p>
         <div>
           <button className="banner_button text-white border-0 me-3">
             Play
@@ -24,7 +29,7 @@ function CarousalItem({ carousalItem }) {
           <button className="banner_button text-white border-0">My List</button>
         </div>
         <p className="banner_description lh-sm pt-1">
-          {trauncate(carousalItem?.description)}
+          {trauncate(carousalItem?.overview)}
         </p>
       </div>
       <div className="banner--fadeBottom" />
