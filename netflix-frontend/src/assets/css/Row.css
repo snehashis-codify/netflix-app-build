@@ -1,0 +1,53 @@
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.row_poster {
+    object-fit: contain;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 450ms;
+    margin-right: 20px;
+    /* position: relative; */
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.02);
+    opacity: 1
+}
+
+.row_poster:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.row_poster>img {
+    width: 370px;
+}
+
+.slick-list {
+    margin: 0 -14px !important
+}
+
+.slick-slide>div {
+    padding: 0 -10px !important;
+}
+
+/* .slick-slide>div {
+    margin: 0 10px;
+}
+
+.slick-next {
+    right: 2px !important;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+
+.slide {
+    position: relative;
+    float: left;
+} */

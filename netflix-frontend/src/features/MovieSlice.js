@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { moviesAxios } from "../axios";
-export const fetchMovies = createAsyncThunk(
-  "movies/fetchMovies",
+export const fetchBannerMovies = createAsyncThunk(
+  "movies/fetchBannerMovies",
   async (movieUrl) => {
     const response = await moviesAxios.get(movieUrl);
     return response.data.results;
@@ -17,15 +17,15 @@ export const moviesSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchMovies.pending, (state, action) => {
+      .addCase(fetchBannerMovies.pending, (state, action) => {
         state.movieStatus = "loading";
       })
-      .addCase(fetchMovies.fulfilled, (state, action) => {
+      .addCase(fetchBannerMovies.fulfilled, (state, action) => {
         state.movieStatus = "succeeded";
         const loadedMovies = action.payload;
         state.moviesList = loadedMovies;
       })
-      .addCase(fetchMovies.rejected, (state, action) => {
+      .addCase(fetchBannerMovies.rejected, (state, action) => {
         state.movieStatus = "failed";
         state.error = action.error.message;
       });

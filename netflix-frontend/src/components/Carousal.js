@@ -7,7 +7,11 @@ import "../assets/css/Slider.css";
 import Skeleton from "@mui/material/Skeleton";
 import { useDispatch, useSelector } from "react-redux";
 import "../assets/css/Banner.css";
-import { fetchMovies, getMovieStatus, getMovies } from "../features/MovieSlice";
+import {
+  fetchBannerMovies,
+  getMovieStatus,
+  getMovies,
+} from "../features/MovieSlice";
 import { requests } from "../MovieRequests";
 function Carousal() {
   let movies = [];
@@ -30,7 +34,7 @@ function Carousal() {
   useEffect(() => {
     let isSubscribed = true;
     if (movieStatus === "idle" && isSubscribed) {
-      dispatch(fetchMovies(requests.fetchNetflixOriginals));
+      dispatch(fetchBannerMovies(requests.fetchNetflixOriginals));
     }
     return () => {
       isSubscribed = false;
