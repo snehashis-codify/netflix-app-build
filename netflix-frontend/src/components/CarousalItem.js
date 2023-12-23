@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/Banner.css";
-
+import { FaPlay } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 function CarousalItem({ carousalItem }) {
   const trauncate = (description) => {
     return description?.length < 150
@@ -12,7 +13,7 @@ function CarousalItem({ carousalItem }) {
       className="banner position-relative object-fit-contain text-white"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url('${process.env.REACT_APP_IMAGE_URL}/${carousalItem?.backdrop_path}')`,
+        backgroundImage: `url('${process.env.REACT_APP_BANNER_IMAGE_URL}/${carousalItem?.backdrop_path}')`,
         backgroundPosition: "center center",
       }}
     >
@@ -22,11 +23,13 @@ function CarousalItem({ carousalItem }) {
             carousalItem?.title ||
             carousalItem?.original_name}
         </p>
-        <div>
-          <button className="banner_button text-white border-0 me-3">
-            Play
+        <div className="d-flex align-items-center">
+          <button className="banner_button text-white border-0 me-3 d-flex align-items-center">
+            <FaPlay className="mx-2" /> Play
           </button>
-          <button className="banner_button text-white border-0">My List</button>
+          <button className="banner_button text-white border-0 d-flex align-items-center">
+            <AiOutlineInfoCircle className="mx-2" /> More Info
+          </button>
         </div>
         <p className="banner_description lh-sm pt-1">
           {trauncate(carousalItem?.overview)}
