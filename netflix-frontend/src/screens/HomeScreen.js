@@ -29,7 +29,7 @@ function HomeScreen() {
     <div style={{ overflowX: "hidden" }}>
       <Nav />
       <Carousal />
-      <Row data={getMoviesRange(0, 10)} title="Trending Now" isLargeRow />
+      <Row data={getMoviesRange(0, 10)} title="Trending Now" />
       <Row data={getMoviesRange(10, 20)} title="New Releases" />
       <Row data={getMoviesRange(20, 30)} title="Blockbuster Movies" />
       <Row data={getMoviesRange(30, 40)} title="Popular on Netflix" />
